@@ -1,17 +1,17 @@
 const todos = [
     {
         id: 1,
-        title: 'Learn React',
+        title: 'Do app on React',
         completed: true
     },
     {
         id: 2,
-        title: 'Learn Redux',
+        title: 'Add Redux to app',
         completed: false
     },
     {
         id: 3,
-        title: 'Learn Saga',
+        title: 'Add  Saga to app',
         completed: false
     }
 ];
