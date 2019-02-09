@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Stats from './Stats';
 
-function Header(props) {
+function Header({ todos }) {
     return (
         <header>
-            <Stats todos={props.todos} />
-            <h1>{props.title}</h1>
+            <Stats todos={todos} />
+            <h1>React Redux ToDo</h1>
         </header>
     );
 }

@@ -1,26 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Stats(props){
+function Stats(props) {
     let total = props.todos.length;
     let completed = props.todos.filter(todo => todo.completed).length;
     let notCompleted = total - completed;
-    return(
+    return (
         <table className="stats">
-        <tbody>
-            <tr>
-                <th>Todo count:</th>
-                <td>{total}</td>
-            </tr>
-            <tr>
-                <th>Done:</th>
-                <td>{completed}</td>
-            </tr>
-            <tr>
-                <th>Todo:</th>
-                <td>{notCompleted}</td>
-            </tr>
-        </tbody>
+            <tbody>
+                <tr>
+                    <th>Todo count:</th>
+                    <td>{total}</td>
+                </tr>
+                <tr>
+                    <th>Done:</th>
+                    <td>{completed}</td>
+                </tr>
+                <tr>
+                    <th>Todo:</th>
+                    <td>{notCompleted}</td>
+                </tr>
+            </tbody>
         </table>
     );
 }

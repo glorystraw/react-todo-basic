@@ -12,6 +12,13 @@ class Todo extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidUpdate(prevProps, prevState) {
+        if (this.state.editing) {
+            this.refs.title.focus();
+            this.refs.title.select();
+        }
+    }
+
     handleSubmit(event) {
         event.preventDefault();
         let title = this.refs.title.value;
@@ -24,7 +31,7 @@ class Todo extends React.Component {
             <div className={`todo${this.props.completed ? ' completed' : ''}`}>
                 <Checkbox
                     checked={this.props.completed}
-                    onChange={() => this.props.onStatusChange(this.props.id)} />
+                    onChange={() => this.props.onToggle(this.props.id)} />
                 <span className="todo-title">{this.props.title}</span>
                 <Button className="edit icon" icon="edit" onClick={() => this.setState({ editing: true })} />
                 <Button className="delete icon" icon="delete" onClick={() => this.props.onDelete(this.props.id)} />
@@ -32,7 +39,7 @@ class Todo extends React.Component {
         );
     }
 
-    renderFrom() {
+    renderForm() {
         return (
             <form className="todo-edit-form" onSubmit={this.handleSubmit}>
                 <input type="text" ref="title" defaultValue={this.props.title} />
@@ -42,14 +49,14 @@ class Todo extends React.Component {
     }
 
     render() {
-        return this.state.editing ? this.renderFrom() : this.renderDisplay();
+        return this.state.editing ? this.renderForm() : this.renderDisplay();
     }
 }
 
 Todo.propTypes = {
     title: PropTypes.string.isRequired,
     completed: PropTypes.bool.isRequired,
-    onStatusChange: PropTypes.func.isRequired,
+    onToggle: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
     onEdit: PropTypes.func.isRequired
 };

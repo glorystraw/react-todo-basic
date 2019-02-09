@@ -13,7 +13,7 @@ function Button(props) {
     );
 }
 
-Button.PropTypes = {
+Button.propTypes = {
     className: PropTypes.string,
     icon: PropTypes.string,
     onClick: PropTypes.func,
