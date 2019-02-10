@@ -1,9 +1,7 @@
 import { ADD_TODO, DELETE_TODO, EDIT_TODO, TOGGLE_TODO } from '../actions';
-const initialState = [
-    {
-        id: 0
-    }
-]
+
+const initialState = [{}];
+
 function todoReducer(state = {}, action) {
     switch (action.type) {
         case ADD_TODO:

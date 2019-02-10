@@ -3,12 +3,10 @@ export const DELETE_TODO = 'DELETE_TODO';
 export const EDIT_TODO = 'EDIT_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
 
-//let nextId = 0;
-
-export function addTodo(title) {
+export function addTodo(id, title) {
     return {
         type: ADD_TODO,
-        id: Date.now(),
+        id,
         title
     };
 }

@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 
 function Stats(props) {
     //TODO Find solution to extract evaluations
-    let totalTask = props.todos.length;
-    let completedTask = props.todos.filter(todo => todo.completed).length;
+    const { todos } = props;
+    let totalTask = todos.length;
+    let completedTask = todos.filter(todo => todo.completed).length;
     let notCompletedTask = totalTask - completedTask;
+
     return (
         <table className="stats">
             <tbody>

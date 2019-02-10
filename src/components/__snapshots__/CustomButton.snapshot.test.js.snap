@@ -1,8 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Snapshot testing enabled Button component 1`] = `
+exports[`Snapshot test for Custom buttom Snapshot test for CustomButton renders as icon 1`] = `
 <button
-  className="edit icon"
+  className="material-icons"
+  onClick={[Function]}
+/>
+`;
+
+exports[`Snapshot test for Custom buttom Snapshot test for CustomButton renders as text 1`] = `
+<button
   onClick={[Function]}
 />
 `;

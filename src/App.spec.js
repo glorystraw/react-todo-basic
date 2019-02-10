@@ -33,7 +33,7 @@ const setup = propOverrides => {
     //     it('should render', () => {
     //       const output = setup();
     //       const [ , formContainer ] = output.props.children;
-    //       expect(formContainer.type).toEqual(FormContainer);
+    //       expect(formContainer.type).toBe(FormContainer);
     //     });
     //   });
   })

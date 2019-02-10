@@ -1,0 +1,33 @@
+import React from 'react';
+import renderer from 'react-test-renderer';
+import Stats from './Stats';
+
+describe('Snapshot test for Stats component', () => {
+
+    test.skip('Snapshot test for Stats renders', () => {
+        const tree = renderer.create(<Stats todos />).toJSON();
+        expect(tree).toMatchSnapshot();
+      });
+
+    const todos = [
+    {
+        id: 1,
+        title: 'Do app on React',
+        completed: true
+    },
+    {
+        id: 2,
+        title: 'Add Redux to app',
+        completed: false
+    },
+    {
+        id: 3,
+        title: 'Add  Saga to app',
+        completed: false
+    }
+];
+
+
+
+
+});

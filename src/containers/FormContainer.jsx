@@ -4,7 +4,7 @@ import { addTodo } from '../actions';
 
 function mapDispatchToProps(dispatch) {
     return {
-        onAdd: title => dispatch(addTodo(title))
+        onAdd: (id, title) => dispatch(addTodo(id, title))
     };
 }
 

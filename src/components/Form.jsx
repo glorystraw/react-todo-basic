@@ -17,7 +17,7 @@ class Form extends React.Component {
         event.preventDefault();
         let title = this.state.title;
         if (title) {
-            this.props.onAdd(title);
+            this.props.onAdd(Date.now(), title);
             this.setState({ title: '' });
         }
     }

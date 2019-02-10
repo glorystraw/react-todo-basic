@@ -18,7 +18,6 @@ export default key => store => next => action => {
         localStorage.setItem(key || 'state', json);
     } catch (error) {
         console.error(error);
-
     }
     return result;
 }
