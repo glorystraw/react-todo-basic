@@ -2,23 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Stats(props) {
-    let total = props.todos.length;
-    let completed = props.todos.filter(todo => todo.completed).length;
-    let notCompleted = total - completed;
+    //TODO Find solution to extract evaluations
+    let totalTask = props.todos.length;
+    let completedTask = props.todos.filter(todo => todo.completed).length;
+    let notCompletedTask = totalTask - completedTask;
     return (
         <table className="stats">
             <tbody>
                 <tr>
                     <th>Todo count:</th>
-                    <td>{total}</td>
+                    <td>{totalTask}</td>
                 </tr>
                 <tr>
                     <th>Done:</th>
-                    <td>{completed}</td>
+                    <td>{completedTask}</td>
                 </tr>
                 <tr>
                     <th>Todo:</th>
-                    <td>{notCompleted}</td>
+                    <td>{notCompletedTask}</td>
                 </tr>
             </tbody>
         </table>

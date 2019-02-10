@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from './Button';
+import CustomButton from './CustomButton';
 
 class Form extends React.Component {
     constructor(props) {
@@ -12,7 +12,7 @@ class Form extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
     }
-    
+
     handleSubmit(event) {
         event.preventDefault();
         let title = this.state.title;
@@ -34,7 +34,7 @@ class Form extends React.Component {
                     type="text"
                     value={this.state.title}
                     placeholder="Add new task" onChange={this.handleChange} />
-                <Button type="submit">Add</Button>
+                <CustomButton type="submit">Add</CustomButton>
             </form>
         );
     }

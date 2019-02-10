@@ -1,8 +1,10 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware,compose } from 'redux';
 import reducer from '../reducers';
 import localStorage, { loadState } from '../middleware/localstorage';
 
 const initialState = loadState();
-const store = createStore(reducer, initialState, applyMiddleware(localStorage()));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducer, initialState, composeEnhancers(
+    applyMiddleware(localStorage())));
 
 export default store;

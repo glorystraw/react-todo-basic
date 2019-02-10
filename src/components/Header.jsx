@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Stats from './Stats';
 
 function Header({ todos }) {
+    //TODO Make title as component
     return (
         <header>
             <Stats todos={todos} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import Checkbox from './Checkbox';
-import Button from './Button';
+import CustomButton from './CustomButton';
 import PropTypes from 'prop-types';
 
 class Todo extends React.Component {
@@ -33,8 +33,8 @@ class Todo extends React.Component {
                     checked={this.props.completed}
                     onChange={() => this.props.onToggle(this.props.id)} />
                 <span className="todo-title">{this.props.title}</span>
-                <Button className="edit icon" icon="edit" onClick={() => this.setState({ editing: true })} />
-                <Button className="delete icon" icon="delete" onClick={() => this.props.onDelete(this.props.id)} />
+                <CustomButton className="edit icon" icon="edit" onClick={() => this.setState({ editing: true })} />
+                <CustomButton className="delete icon" icon="delete" onClick={() => this.props.onDelete(this.props.id)} />
             </div>
         );
     }
@@ -43,7 +43,7 @@ class Todo extends React.Component {
         return (
             <form className="todo-edit-form" onSubmit={this.handleSubmit}>
                 <input type="text" ref="title" defaultValue={this.props.title} />
-                <Button className="save icon" icon="save" type="submit" />
+                <CustomButton className="save icon" icon="save" type="submit" />
             </form>
         );
     }
