@@ -120,24 +120,6 @@ header h1 {
     font-family: monospace;
 }
 
-
-
-/* Stopwatch */
-.stopwatch {
-    padding: 15px 10px 5px 10px;
-}
-
-.stopwatch-time {
-    font-family: monospace;
-    font-size: 2em;
-}
-
-.stopwatch-controls button {
-    margin: 5px;
-    color: white;
-}
-
-
 /* Todo */
 .todo {
     display: flex;

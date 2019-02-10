@@ -22,6 +22,8 @@ function todoReducer(state = {}, action) {
             return Object.assign({}, state, {
                 title: action.title
             });
+        default:
+            return state;
     }
 }
 

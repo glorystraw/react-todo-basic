@@ -12,7 +12,7 @@ function App({ store }) {
         </main>
     );
 }
-
+// Same function in clss view
 // class App extends React.Component {
 //     render() {
 //         const store = this.props.store;
