@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot testing enabled Button component 1`] = `
+<button
+  className="edit icon"
+  onClick={[Function]}
+/>
+`;
